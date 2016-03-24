@@ -1,4 +1,4 @@
-WHAT IS vlandhcpd?
+#vlandhcpd#
 
 vlandhcpd is a VLAN-aware DHCP server. This means that you can configure it
 to run on a trunking device and assign network configuration to clients in
@@ -14,24 +14,24 @@ client request.
 If you configure no VLANs or use vlandhcpd on a non-trunking interface it
 will act as a normal DHCP server.
 
-DEPENDENCIES
+##Dependencies##
 
 - cmake
 - glib 2.0
 - libpcap
 
-USAGE
+##Usage##
 
 When you start vlandhcpd you need to supply the path to the configuration
 file as well as the name of the trunking interface:
 
-vlandhcpd dhcpd.conf eth0
+> vlandhcpd dhcpd.conf eth0
 
-CONFIGURATION
+##Configuration##
 
-A valid configuration file for vlandhcpd looks like the following example:
+A valid *dhcpd.conf* configuration file for vlandhcpd looks like the following example:
 
-=== dhcpd.conf start ===
+```
 serverip 192.168.1.155
 lease 86400
 
@@ -50,7 +50,7 @@ VLAN 55
 
 client 192.168.1.193 mac 00:26:0a:16:b3:99
 client 192.168.1.194 mac c8:2a:14:09:54:5a
-=== dhcpd.conf end ===
+```
 
 The file is devided into sections. A new section starts with the keyword VLAN
 followed by a VLAN tag number. If you don't specify a VLAN at the beginning of
@@ -66,6 +66,6 @@ static MAC address to client IP mappings.
 Remember that all the netwide settings are reused in the all the following
 sections until you redefine them.
 
-CONTACT
+##Contact##
 
 Andreas Heck <aheck@gmx.de>

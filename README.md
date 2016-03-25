@@ -68,4 +68,4 @@ sections until you redefine them.
 
 ##Contact##
 
-Andreas Heck <aheck@gmx.de>
+Andreas Heck <<aheck@gmx.de>>
